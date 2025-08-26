@@ -16,6 +16,7 @@ body {
 
 h2 {
   text-transform: uppercase;
+  padding: 10px 0;
 }
 
 p {
@@ -29,38 +30,68 @@ form {
   padding: 20px;
 }
 
-.subtext {
-  color: #a9a9a9;
-  font-weight: unset;
+/* Row wrapper */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px; /* 30px between rows */
 }
 
-#sign-in,
-#sign-up {
-  width: 100%;
+/* Labels default */
+.form-row label {
+  margin-bottom: 6px; /* 6px gap between label & input */
 }
 
-a {
-  color: #335eea;
-  text-decoration: none;
+.form-row-inline {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px; /* space between input and label */
 }
 
-label {
-  font-weight: bold;
-}
 
-input {
+/* Bold for text-like fields + selects */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"],
+.form-row input[type="number"],
+.form-row select,
+.form-row textarea {
   width: 100%;
   height: 30px;
   padding: 5px;
+  font-weight: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.form-row input[type="text"] ~ label,
+.form-row input[type="email"] ~ label,
+.form-row input[type="password"] ~ label,
+.form-row input[type="number"] ~ label,
+.form-row select ~ label,
+.form-row textarea ~ label {
+  font-weight: bold;
+}
+
+/* Checkbox & radio inputs — no bold labels */
+.form-row input[type="checkbox"],
+.form-row input[type="radio"] {
   width: max-content;
   height: max-content;
   padding: 0;
 }
 
+.form-row input[type="checkbox"] + label,
+.form-row input[type="radio"] + label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* Paragraphs used instead of labels */
+.form-row p {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Submit button */
 input[type="submit"] {
   width: unset;
   height: unset;
@@ -80,6 +111,28 @@ input[type="submit"]:hover {
   background: #294bbb;
 }
 
-.form select {
+/* Dropdowns */
+form select {
   height: 30px;
+}
+
+.subtext {
+  color: #a9a9a9;
+  font-weight: normal;
+}
+
+#sign-in,
+#sign-up {
+  width: 100%;
+}
+#sign-in .form-header,
+#sign-up .form-header {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #335eea;
+  text-decoration: none;
+  padding: 5px;;
+
 }
