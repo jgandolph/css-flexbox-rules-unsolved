@@ -50,7 +50,8 @@ section {
 }
 
 .search-bar {
-  width: 400px;
+  width: 100%;
+   max-width: 250px;     
   background: #1f1f27;
   padding: 10px 20px;
   border-radius: 20px;
@@ -71,12 +72,19 @@ section {
 }
 
 .options {
+  display: flex;              
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 }
 
 .option {
   min-width: 60px;
   text-transform: capitalize;
   cursor: pointer;
+  display: flex;           
+  align-items: center;
+  gap: 6px;                   
 }
 
 .option i {
@@ -84,9 +92,14 @@ section {
   color: #d5ef9a;
 }
 
+
 .categories {
+  display: flex;          
+  flex-wrap: wrap;        
+  gap: 20px;
   background-color: #2b2d36;
   padding-top: 20px;
+ align-content: center;
 }
 
 .category {
