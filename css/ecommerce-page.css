@@ -47,7 +47,7 @@ section {
   display: flex;
   justify-content: center;    /* centers logo and search bar */
   align-items: center;
-  gap: 40px;                  /* centers vertically */
+  width: 500px;               /* controls spacing between logo and search bar */
 }
 
 .logo {
@@ -96,7 +96,8 @@ section {
   cursor: pointer;
   display: flex;           
   align-items: center;
-  gap: 6px;                   
+  gap: 6px; 
+  flex-direction: column;                  
 }
 
 .option i {
@@ -108,9 +109,9 @@ section {
 .categories {
   display: flex;              /* make them horizontal */
   justify-content: center;    /* center across the page */
-  gap: 16px;                  /* spacing between items */
+  gap: 20px;                  /* spacing between items */
   background-color: #2b2d36;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .category {
@@ -143,6 +144,8 @@ i.fa-th-list {
 .section-control {
   padding-bottom: 20px;
   border-bottom: 1px solid #8d8ba5;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-control .view-option {
@@ -150,10 +153,21 @@ i.fa-th-list {
   height: 40px;
   border: 1px solid #8d8ba5;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-options {
+  display: flex;
+  gap: 10px;
 }
 
 .products {
   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap onto multiple lines */
+  gap: 20px; /* spacing between items */
 }
 
 .product {
@@ -238,6 +252,7 @@ i.fa-th-list {
 .grid .product-action {
   padding-top: 30px;
   border-top: 1px solid #8d8ba5;
+  justify-content: center;
 }
 
 /* LINE VIEW STYLES */
