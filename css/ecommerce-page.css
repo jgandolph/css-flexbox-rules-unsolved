@@ -214,7 +214,7 @@ i.fa-th-list {
   width: 100%;          /* take full width of grid cell */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;  /* center image + data vertically */
 }
 
 .grid .product-image-wrapper {
@@ -223,11 +223,16 @@ i.fa-th-list {
 
 .grid .product-data {
   height: 100%;
+  padding: 20px 0;
+  justify-content: space-between;
 }
 
 .grid .product-info {
   text-align: center;
-  padding: 0 20px 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .grid .product-action {
@@ -254,15 +259,18 @@ i.fa-th-list {
 }
 
 .lines .product-info {
+  padding: 20px;
 }
 
 .lines .product-action {
+  align: center;
+  padding: 20px;
 }
 
 .lines-action.products {
   display: flex;
   flex-direction: column; /* stack vertically */
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   padding: 20px;
 }
