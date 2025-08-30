@@ -12,6 +12,9 @@ body {
 
 .content {
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 h2 {
@@ -56,11 +59,19 @@ form {
 .form-row input[type="number"],
 .form-row select,
 .form-row textarea {
-  width: 100%;
+  width: 100%;   /* <- these are 300px wide */
+  max-width: 480px;
   height: 30px;
   padding: 5px;
   font-weight: normal;
 }
+
+input[type="number"] {
+  width: 480px;   /* <- this overrides and makes phone longer */
+  height: 30px;
+  padding: 5px;
+}
+
 
 .form-row input[type="text"] ~ label,
 .form-row input[type="email"] ~ label,
@@ -116,6 +127,11 @@ form select {
   height: 30px;
 }
 
+.phone-number {
+  display: flex;
+  flex-direction: column;
+}
+
 .subtext {
   color: #a9a9a9;
   font-weight: normal;
@@ -123,7 +139,9 @@ form select {
 
 #sign-in,
 #sign-up {
-  width: 100%;
+
+  flex: 1;            /* let both take equal width */
+  max-width: 480px;   /* prevent forms from stretching too wide */
 }
 #sign-in .form-header,
 #sign-up .form-header {
